@@ -22,8 +22,7 @@ def archive_sql_database(prm_sql_server=None, prm_database=None, prm_is_only_dif
                 conn = pymssql.connect(server=prm_sql_server['name'], user=prm_sql_server['user'],
                                        password=prm_sql_server['password'], database='', autocommit=True)
 
-                conn.cursor().execute('''BACKUP DATABASE '''+cur_database['base_name']+''' to DISK=N'''+"'" +
-                                      cur_database['server_path'] + backup_file_name + "'" + ''' WITH NOFORMAT
+                conn.cursor().execute('''BACKUP DATABASE '''+cur_database['base_name']+''' to DISK=N'''+"'" + cur_database['server_path'] + backup_file_name + "'" + ''' WITH NOFORMAT
                                       ,NOINIT
                                       ,NAME = N'''+"'" + cur_database['backup_name'] + "'" + '''
                                       ,SKIP
