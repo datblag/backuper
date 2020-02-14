@@ -5,6 +5,7 @@ import logging
 
 # prm_sql_server {'name': server_name, 'user': user_login, 'password': user_password}
 # prm_database [{'base_name': '', 'backup_name': '', 'server_path': '', 'net_path': ''}]
+#test 2
 def archive_sql_database(prm_sql_server=None, prm_database=None, prm_is_only_differences=0):
     prm_sql_server = prm_sql_server if prm_sql_server else {}
     prm_database = prm_database if prm_database else []
