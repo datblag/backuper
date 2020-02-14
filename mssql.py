@@ -1,7 +1,6 @@
 import os
 import pymssql
 import logging
-import shutil
 
 
 # prm_sql_server {'name': server_name, 'user': user_login, 'password': user_password}
